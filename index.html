@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Q3 Agenda</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<meta name="google-signin-client_id" content="162424039883-a7fila07v1acm3buadglijkr6qtvam8e.apps.googleusercontent.com">
+</head>
+<body>
+	<div class="topnav">
+		<a style="float:left" href="index.html" class="active">Home</a>
+		<a style="float:left" href="rubric/rubric.html">Rubric</a>
+		<a style="float:left" href="winter/winter.html">Winter</a>
+		<a style="float:left" href="info/info.html">Learning</a>
+		<a style="float:left" href="projects/projects.html">Projects</a>
+		<a style="float:right"><div class="g-signin2" data-onsuccess="onSignIn"></div></a>
+		<a style="float:right" href="contact/contact.html">Contact</a>
+		<a style="float:right" href="git/git.html">Git</a>
+	</div>
+	
+	<br/>
+	<br/>
+	<h1>Week 1:</h1>
+	<ol>
+		<li>
+			<dl>
+				<dd>Setup Sourcelair Subscriptions</dd>
+				<dd>HTML, CSS, Git Refresher</dd>
+				<dd>Personal Updates Page</dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dd>Daily Commitments</dd>
+				<dd>Personal Updates Page Submission</dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dd>Team Assignments</dd>
+				<dd>Project Brainstorm</dd>
+				<dd>
+					<ul>
+						<li>Select Website Idea</li>
+						<li>Begin Planning</li>
+						<li>Breakdown Who Does What</li>
+					</ul>
+				</dd>
+				<dd>Plan Submission</dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dd>Photoshop</dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dd>Photoshop</dd>
+			</dl>
+		</li>
+	</ol>
+	<h1>Week 2:</h1>
+	<ol>
+		<li>
+			<dl>
+				<dd>Group Project Begin</dd>
+				<dd>Make Daily Commitments</dd>
+				<dd>Submit Commitment End of Day</dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dd>Group Project Continue</dd>
+				<dd>Make Daily Commitments</dd>
+				<dd>Submit Commitment End of Day</dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dd>Finish Group Project</dd>
+				<dd>Make Daily Commitments</dd>
+				<dd>Final Review before PAB</dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dd>Personal Task Choices</dd>
+				<dd>Work on Personal Task of Choice</dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dd>Personal Task & Resume Submissions by 2 PM</dd>
+				<dd>Presentation Prep</dd>
+				<dd>Presentations</dd>
+			</dl>
+		</li>
+	</ol>
+	<script>
+		function onSignIn(googleUser) {
+			var profile = googleUser.getBasicProfile();
+			var id_token = googleUser.getAuthResponse().id_token.hashCode();
+			console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+			console.log('Name: ' + profile.getName());
+			console.log('Image URL: ' + profile.getImageUrl());
+			console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+			console.log('ID Token: ' + id_token);
+		}
+
+		String.prototype.hashCode = function() {
+			var hash = 0, i, chr;
+			if (this.length === 0) return hash;
+			for (i = 0; i < this.length; i++) {
+				chr   = this.charCodeAt(i);
+				hash  = ((hash << 5) - hash) + chr;
+				hash |= 0; // Convert to 32bit integer
+			}
+			return hash;
+		};
+	</script>
+
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+</body>
+</html>

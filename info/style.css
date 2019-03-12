@@ -1,0 +1,27 @@
+iframe {
+	margin: 0 auto;
+	background-color: #777;
+	display: block;
+}
+
+.center_image {
+	margin: auto;
+	padding: 10px;
+	display: block;
+}
+
+li {
+	padding-left: 10%;
+	list-style-position: inside;
+}
+
+hr {
+    display: block;
+    height: 1px;
+	border: 0;
+	width: 90%;
+	left: 5%;
+    border-top: 1px solid #ccc;
+    margin: 1em auto;
+    padding: 0;
+}
