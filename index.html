@@ -19,6 +19,8 @@
 	
 	<br/>
 	<br/>
+	<h1 id="username">Welcome Back!</h1>
+	<br/>
 	<h1>Week 1:</h1>
 	<ol>
 		<li>
@@ -80,43 +82,34 @@
 				<dd>Finish Group Project</dd>
 				<dd>Make Daily Commitments</dd>
 				<dd>Final Review before PAB</dd>
+				<dd>Post Mortem</dd>
+				<dd>Team Survey</dd>
 			</dl>
 		</li>
 		<li>
 			<dl>
-				<dd>Personal Task Choices</dd>
-				<dd>Work on Personal Task of Choice</dd>
+				<dd>How To: LinkedIn and Glassdoor</dd>
+				<dd>Job Post & Salary Review Assignment</dd>
 			</dl>
 		</li>
 		<li>
 			<dl>
-				<dd>Personal Task & Resume Submissions by 2 PM</dd>
-				<dd>Presentation Prep</dd>
+				<dd>Final Submissions & Presentation Prep</dd>
 				<dd>Presentations</dd>
+				<dd>Break!</dd>
 			</dl>
 		</li>
 	</ol>
 	<script>
 		function onSignIn(googleUser) {
 			var profile = googleUser.getBasicProfile();
-			var id_token = googleUser.getAuthResponse().id_token.hashCode();
 			console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
 			console.log('Name: ' + profile.getName());
 			console.log('Image URL: ' + profile.getImageUrl());
 			console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-			console.log('ID Token: ' + id_token);
-		}
 
-		String.prototype.hashCode = function() {
-			var hash = 0, i, chr;
-			if (this.length === 0) return hash;
-			for (i = 0; i < this.length; i++) {
-				chr   = this.charCodeAt(i);
-				hash  = ((hash << 5) - hash) + chr;
-				hash |= 0; // Convert to 32bit integer
-			}
-			return hash;
-		};
+			document.getElementById("username").innerHTML = "Welcome Back " + profile.getName() + "!";
+		}
 	</script>
 
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
